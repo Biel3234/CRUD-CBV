@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if addresses %}
+        <h1>Endereços</h1>
+        <table>
+            <tr>
+                <th>CEP</th>
+                <th>Cidade</th>
+                <th>UF</th>
+            </tr>
+            {% for address in addresses %}
+                <tr>
+                    <td>{{ address.cep }}</th>
+                    <td>{{ address.localidade }}</th>
+                    <td>{{ address.uf }}</th>
+                </tr>
+                {% endfor %}
+        </table>
+        {% endif %}
+</body>
+</html>
